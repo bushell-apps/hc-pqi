@@ -1,0 +1,29 @@
+/* Two-line compact badge that won’t sprawl into the post body */
+.hc-pqi {
+  display: inline-grid;         /* stacks score then label */
+  grid-auto-flow: row;
+  align-items: start;
+  margin-left: 8px;
+  padding: 4px 8px;
+  border-radius: 10px;
+  font-size: 12px;
+  line-height: 1.2;
+  font-weight: 600;
+  border: 1px solid currentColor;
+  vertical-align: top;
+  white-space: normal;          /* allow the second line */
+  max-width: 120px;             /* keeps it tidy on narrow layouts */
+}
+
+.hc-pqi__score { font-weight: 700; }
+.hc-pqi__label {
+  font-size: 11px;
+  opacity: 0.9;
+  margin-top: 2px;
+}
+
+/* Colour tiers */
+.hc-pqi--low   { color: #b91c1c; background: #fee2e2; } /* Poor */
+.hc-pqi--mid   { color: #92400e; background: #fef3c7; } /* Solid */
+.hc-pqi--high  { color: #065f46; background: #d1fae5; } /* Amazing */
+.hc-pqi--ultra { color: #5b21b6; background: #ede9fe; } /* Legendary (>100%) */
